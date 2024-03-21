@@ -1,4 +1,3 @@
-
 const mongoose = require("mongoose");
 
 const reviewsSchema = new mongoose.Schema(
@@ -35,7 +34,7 @@ const productSchema = new mongoose.Schema(
       required: true,
     },
     brand: {
-      type: Boolean,
+      type: String,
       required: true,
     },
     category: {
