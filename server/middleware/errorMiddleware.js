@@ -1,14 +1,10 @@
-module.exports.notFound = (err, req, res, next) => {
-  const error = new Error(`Not Found - ${req.originalUrl}`);
-};
-
-module.exports.errorHandler = (err, req, res, next) => {
-  const statusCode = res.statusCode === 200 ? 500 : res.statusCode;
-  res.status(statusCode);
+module.exports = (err, req, res, next) => {
+  err.statusCode = err.statusCode || 500;
+  err.status = err.status || "error";
+  res.status(err.statusCode);
   res.json({
+    status: err.status,
     message: err.message,
-    stack: process.env.NODE_ENV === "production" ? null : err.stack,
   });
+  next();
 };
-
-
