@@ -13,7 +13,6 @@ const Header = () => {
   const { userInfo } = userLogin;
   const navigate = useNavigate();
   const logoutHandler = () => {
-    
     dispatch(logout());
   };
   return (

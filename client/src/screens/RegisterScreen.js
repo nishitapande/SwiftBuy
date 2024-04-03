@@ -30,7 +30,7 @@ const RegisterScreen = () => {
       navigate(redirect);
     }
   }, [userInfo, navigate, redirect]);
-  
+
   const submitHandler = (e) => {
     e.preventDefault();
     // console.log(email, password);
@@ -91,7 +91,7 @@ const RegisterScreen = () => {
       <Row className="my-3">
         <Col>
           Have an account ?{" "}
-          <Link to={redirect ? `/login?redirect=${redirect}` : `/login`}>
+          <Link to={redirect ? `/login?redirect=${redirect}` : "/login"}>
             Login
           </Link>
         </Col>

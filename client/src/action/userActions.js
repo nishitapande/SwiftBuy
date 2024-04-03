@@ -1,5 +1,8 @@
 import axios from "axios";
 import {
+  USER_DETAILS_ERROR,
+  USER_DETAILS_REQUEST,
+  USER_DETAILS_SUCCESS,
   USER_LOGIN_ERROR,
   USER_LOGIN_REQUEST,
   USER_LOGIN_SUCCESS,
@@ -90,4 +93,42 @@ export const logout = () => async (dispatch) => {
   dispatch({
     type: USER_LOGOUT,
   });
+};
+
+export const getUserDetails = (id) => async (dispatch, getState) => {
+  try {
+    dispatch({
+      type: USER_DETAILS_REQUEST,
+    });
+
+    const {
+      userLogin: { userInfo },
+    } = getState();
+
+    console.log("token from userInfo", userInfo.token);
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${userInfo.token}`,
+      },
+    };
+
+    const { data } = await axios.get(`/api/users/${id}`, config);
+
+    console.log("data: ", data);
+
+    dispatch({
+      type: USER_DETAILS_SUCCESS,
+      payload: data,
+    });
+    
+  } catch (error) {
+    dispatch({
+      type: USER_DETAILS_ERROR,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    });
+  }
 };

@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const userController = require("../controllers/userController");
 const authController = require("./../controllers/authController");
 const authMiddleware = require("../middleware/authMiddleware");
 
@@ -9,7 +8,7 @@ router.post("/login", authController.login);
 
 router
   .route("/profile")
-  .get(authMiddleware.protect, userController.getUserProfile)
-  .put(authMiddleware.protect, userController.updateUserProfile);
+  .get(authMiddleware.protect, authController.getUserProfile)
+  .put(authMiddleware.protect, authController.updateUserProfile);
 
 module.exports = router;
