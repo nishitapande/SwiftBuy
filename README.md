@@ -4,6 +4,7 @@ Home Page
 
 ![image](https://github.com/nishitapande/SwiftBuy/assets/89330962/eec08543-6c0b-4ad6-a76e-cc440b83cc9e)
 
+Product details page
 
 ![image](https://github.com/nishitapande/SwiftBuy/assets/89330962/25ccf407-ea38-4ac5-82e1-56065c29a8ff)
 
