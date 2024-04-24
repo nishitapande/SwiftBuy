@@ -12,15 +12,17 @@ Sign In page
 
 ![image](https://github.com/nishitapande/SwiftBuy/assets/89330962/3d8c0ce7-37b5-45b6-a9e1-9c2bf7e40f51)
 
-
+Home page after login
 
 ![image](https://github.com/nishitapande/SwiftBuy/assets/89330962/bc941277-26da-4bb0-876a-497636cf2c98)
 
 
+Cart Page
 
 ![image](https://github.com/nishitapande/SwiftBuy/assets/89330962/588ca1d5-2b67-4199-af2b-7f33b6518ab9)
 
 
+Shipping page
+![image](https://github.com/nishitapande/SwiftBuy/assets/89330962/9891cd1b-cddd-48b7-9ce9-72bac7fca021)
 
-![Uploading image.png…]()
 
