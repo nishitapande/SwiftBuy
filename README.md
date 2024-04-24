@@ -8,6 +8,7 @@ Product details page
 
 ![image](https://github.com/nishitapande/SwiftBuy/assets/89330962/25ccf407-ea38-4ac5-82e1-56065c29a8ff)
 
+Sign In page
 
 ![image](https://github.com/nishitapande/SwiftBuy/assets/89330962/3d8c0ce7-37b5-45b6-a9e1-9c2bf7e40f51)
 
